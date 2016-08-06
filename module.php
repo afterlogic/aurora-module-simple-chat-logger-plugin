@@ -19,7 +19,7 @@ class SimpleChatLoggerModule extends AApiModule
 	 */
 	public function afterCreatePost($aArgs)
 	{
-		$iUserId = \CApi::getLogginedUserId();
+		$iUserId = \CApi::getAuthenticatedUserId();
 		\CApi::Log($iUserId.' ['.$aArgs['Date'].'] '.$aArgs['Text'], ELogLevel::Full, 'simple-chat');
 	}
 }
