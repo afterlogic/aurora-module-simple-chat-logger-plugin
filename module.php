@@ -2,7 +2,7 @@
 
 namespace Aurora\Modules;
 
-class SimpleChatLoggerModule extends \AApiModule
+class SimpleChatLoggerModule extends \Aurora\System\AbstractModule
 {
 	/**
 	 * Subscribes on the event that is broadcasted after executing of the CreatePost method in the SimpleChat module.
@@ -21,7 +21,7 @@ class SimpleChatLoggerModule extends \AApiModule
 	 */
 	public function afterCreatePost($aArgs)
 	{
-		$iUserId = \CApi::getAuthenticatedUserId();
-		\CApi::Log($iUserId.' ['.$aArgs['Date'].'] '.$aArgs['Text'], \ELogLevel::Full, 'simple-chat');
+		$iUserId = \Aurora\System\Api::getAuthenticatedUserId();
+		\Aurora\System\Api::Log($iUserId.' ['.$aArgs['Date'].'] '.$aArgs['Text'], \ELogLevel::Full, 'simple-chat');
 	}
 }
