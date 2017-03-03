@@ -2,7 +2,7 @@
 
 namespace Aurora\Modules;
 
-class SimpleChatLoggerModule extends \Aurora\System\AbstractModule
+class SimpleChatLoggerModule extends \Aurora\System\Module\AbstractModule
 {
 	/**
 	 * Subscribes on the event that is broadcasted after executing of the CreatePost method in the SimpleChat module.
