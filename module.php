@@ -1,8 +1,8 @@
 <?php
 
-namespace Aurora\Modules;
+namespace Aurora\Modules\SimpleChatLoggerPlugin;
 
-class SimpleChatLoggerModule extends \Aurora\System\Module\AbstractModule
+class Module extends \Aurora\System\Module\AbstractModule
 {
 	/**
 	 * Subscribes on the event that is broadcasted after executing of the CreatePost method in the SimpleChat module.
