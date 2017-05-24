@@ -33,6 +33,6 @@ class Module extends \Aurora\System\Module\AbstractModule
 	public function afterCreatePost($aArgs)
 	{
 		$iUserId = \Aurora\System\Api::getAuthenticatedUserId();
-		\Aurora\System\Api::Log($iUserId.' ['.$aArgs['Date'].'] '.$aArgs['Text'], \ELogLevel::Full, 'simple-chat');
+		\Aurora\System\Api::Log($iUserId.' ['.$aArgs['Date'].'] '.$aArgs['Text'], \Aurora\System\Enums\LogLevel::Full, 'simple-chat');
 	}
 }
